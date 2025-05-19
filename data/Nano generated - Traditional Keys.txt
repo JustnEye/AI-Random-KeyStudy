@@ -1,0 +1,47 @@
+Last login: Fri May  9 10:39:59 on ttys000
+victor@MacBook-Air-46 ~ % cd ~/AI-Random-KeyStudy
+
+victor@MacBook-Air-46 AI-Random-KeyStudy % mkdir traditional_keys && cd traditional_keys
+
+victor@MacBook-Air-46 traditional_keys % nano generate_traditional_keys.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  UW PICO 5.09           File: generate_traditional_keys.py           Modified  
+
+user_key_subblocks = [1, 2, 3, 4, 5, 6, 7, 8]
+    
+# Convert to binary (each subblock → 16-bit string)
+user_key_bits = ''.join(f'{block:016b}' for block in user_key_subblocks)
+            
+# Convert to list of individual bits
+user_key_bits = list(user_key_bits)
+
+# Generate the full key schedule
+subkeys = generate_idea_key_schedule(user_key_bits)
+
+# Flatten into a single binary string
+bitstring = to_binary_string(subkeys)
+
+# Write to file in NIST-compatible format
+write_nist_format(bitstring, "traditional_key.txt")
+
+
+
+
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Pg   ^K Cut Text  ^C Cur Pos   
+^X Exit      ^J Justify   ^W Where is  ^V Next Pg   ^U UnCut Text^T To Spell  

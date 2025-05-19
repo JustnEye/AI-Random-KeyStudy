@@ -1,0 +1,12 @@
+Training AI key generator...
+Generating keys...
+Running Chi-Square test...
+
+AI Key Generator:
+  Chi-Square: 751840.38, p-value: 0.0000
+AES Keys:
+  Chi-Square: 282.21, p-value: 0.1163
+
+Runs Test:
+AI Keys: Runs = 9995, Expected = 7500.50
+AES Keys: Runs = 8021, Expected = 8001.00
