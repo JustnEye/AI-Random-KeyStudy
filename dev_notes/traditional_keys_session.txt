@@ -1,0 +1,18 @@
+# Traditional Key Generator — Development Log
+
+- Navigated to project directory
+- Created folder `traditional_keys/` and started script `generate_traditional_keys.py`
+- Initial attempt resulted in a TypeError: attempted to join a list of lists instead of strings
+- Rewrote the function `to_binary_string()` to flatten subkeys properly
+- Deleted and re-created the script to remove the broken version
+- Final version now converts subkeys into a flat binary string and writes NIST-compatible output
+- Output successfully saved to the `traditional_key.txt`
+# Snippet from final script (for reference)
+
+user_key_subblocks = [1, 2, 3, 4, 5, 6, 7, 8]
+user_key_bits = ''.join(f'{block:016b}' for block in user_key_subblocks)
+user_key_bits = list(user_key_bits)
+
+subkeys = generate_idea_key_schedule(user_key_bits)
+bitstring = to_binary_string(subkeys)
+write_nist_format(bitstring, "traditional_key.txt")
