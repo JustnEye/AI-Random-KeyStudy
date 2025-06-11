@@ -1,9 +1,8 @@
-Last login: Fri May  9 10:39:59 on ttys000
-victor@MacBook-Air-46 ~ % cd ~/AI-Random-KeyStudy
+# Terminal session log
+# Creating a traditional key generator folder and script
 
-victor@MacBook-Air-46 AI-Random-KeyStudy % mkdir traditional_keys && cd traditional_keys
-
-victor@MacBook-Air-46 traditional_keys % nano generate_traditional_keys.py
+$ mkdir traditional_keys && cd traditional_keys
+$ nano generate_traditional_keys.py
 
 
 
